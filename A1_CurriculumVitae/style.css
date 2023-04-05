@@ -1,0 +1,41 @@
+body {
+    font-family: calibri;
+}
+
+img {
+	width: 20%;
+	height: 20%;
+    border-style: solid;
+}
+
+h1 {
+	color: #02417c;
+	text-align: center;
+}
+
+h2 {
+    color: blue;
+}
+
+ul {
+	list-style-type: square;
+}
+
+table {
+	border-style: solid;
+	border-collapse: collapse;
+}
+
+td, th {
+	border-style: solid;
+	padding: 10px;
+}
+
+.celda {
+	background-color: #d4d3d3;
+}
+
+.centre {
+	text-align: center;
+}
+
