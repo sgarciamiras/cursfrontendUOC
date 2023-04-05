@@ -1,0 +1,137 @@
+body {
+    font-family: calibri;
+    background-color: rgb(205, 247, 233);
+    font-size: medium;
+}
+
+img {
+	width: 20%;
+	height: 20%;
+    border-style: solid;
+}
+
+h1, h4 {
+	text-align: center;
+}
+
+ul {
+	list-style-type: square;
+}
+
+table {
+	border-style: solid;
+	border-collapse: collapse;
+}
+
+td, th {
+	border-style: solid;
+	padding: 10px;
+}
+
+.celda {
+	background-color: #d4d3d3;
+}
+
+.centre {
+	text-align: center;
+}
+
+.recuadro {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+/*barra de menu*/
+nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0 5%;
+    height: 100px;
+    background-color:black;
+}
+
+nav .logo{
+    display: flex;
+    float: left;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+    font-size: 24px;
+    color: #31f1e1; 
+    font-weight: bold;
+}
+
+nav .menu {
+    display: flex;
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+}
+
+nav .menu li {
+    list-style: none;
+}
+
+nav .menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* cajas*/
+
+.cajalink {
+    background-color: #31f1e1; ;
+    text-align: center;
+    padding: 20px 12px;
+    top: 600;
+}
+
+.cajalink .estilocarta{
+    display: flex;
+    justify-content: center;
+}
+
+.cajalink .carta {
+    background-position: center center;
+    background-size: cover;
+    padding: 10px 0px;
+    margin: 5px;
+    border-radius: 20px;
+    color: #fff;
+ }
+
+ .cajalink .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 10px 0px;
+    margin: 5px;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.carta:first-child{
+    background-color: rgb(125, 126, 126);
+}
+
+.carta:nth-child(2){
+    background-color: rgb(125, 126, 126);
+}
+ 
+
+ 
+ 
