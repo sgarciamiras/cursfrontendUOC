@@ -1,13 +1,14 @@
 body {
     font-family: calibri;
     background-color: rgb(205, 247, 233);
-    font-size: medium;
+    font-size: 20px;
 }
 
 img {
-	width: 20%;
-	height: 20%;
-    border-style: solid;
+	display: block;
+	margin: auto;
+    width: 50%;
+	height: 50%;
 }
 
 h1, h4 {
@@ -41,8 +42,8 @@ td, th {
     border-radius: 5px;
     padding-left: 30px;
     padding-right: 30px;
-    padding-top: 5px;
-    padding-bottom: 20px;
+    padding-top: 120px;
+    padding-bottom: 30px;
     margin-right: 5%;
     margin-left: 5%;
 }
@@ -54,7 +55,7 @@ nav {
     right: 0;
     top: 0;
     padding: 0 5%;
-    height: 100px;
+    height: 70px;
     background-color:black;
 }
 
@@ -94,43 +95,29 @@ nav .menu a {
 
 /* cajas*/
 
-.cajalink {
-    background-color: #31f1e1; ;
-    text-align: center;
-    padding: 20px 12px;
-    top: 600;
-}
-
-.cajalink .estilocarta{
+.cajas {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    gap: 5rem;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin: 10 rem auto;
 }
 
-.cajalink .carta {
-    background-position: center center;
-    background-size: cover;
-    padding: 10px 0px;
-    margin: 5px;
-    border-radius: 20px;
-    color: #fff;
- }
-
- .cajalink .carta{
-    background-position: center center;
-    background-size: cover;
-    padding: 10px 0px;
-    margin: 5px;
-    border-radius: 20px;
-    color: #fff;
+.caja {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 15rem;
+    width: 15rem;
+    border: 2px solid black;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 15px 15x black;
+    text-align: center;
 }
 
-.carta:first-child{
-    background-color: rgb(125, 126, 126);
-}
-
-.carta:nth-child(2){
-    background-color: rgb(125, 126, 126);
-}
  
 
  
