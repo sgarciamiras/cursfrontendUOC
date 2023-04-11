@@ -1,20 +1,16 @@
 body {
     font-family: calibri;
+    background-color: rgb(205, 247, 233);
+    font-size: 20px;
 }
 
-img {
-	width: 20%;
-	height: 20%;
-    border-style: solid;
+.img {
+	display: block;
+	margin: auto;
 }
 
-h1 {
-	color: #02417c;
+h1, h4 {
 	text-align: center;
-}
-
-h2 {
-    color: blue;
 }
 
 ul {
@@ -39,3 +35,88 @@ td, th {
 	text-align: center;
 }
 
+.recuadro {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 120px;
+    padding-bottom: 30px;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+/*barra de menu*/
+nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 0 5%;
+    height: 70px;
+    background-color:black;
+}
+
+nav .logo{
+    display: flex;
+    float: left;
+    width: 40%;
+    height: 100%;
+    align-items: center;
+    font-size: 24px;
+    color: #31f1e1; 
+    font-weight: bold;
+}
+
+nav .menu {
+    display: flex;
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+}
+
+nav .menu li {
+    list-style: none;
+}
+
+nav .menu a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* cajas*/
+
+.cajas {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5rem;
+    flex-wrap: wrap;
+    width: fit-content;
+    margin: 20 rem auto;
+}
+
+.caja {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 15rem;
+    width: 30rem;
+    border: 2px solid black;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 15px 15x black;
+    text-align: center;
+}
+
+ 
+
+ 
+ 
