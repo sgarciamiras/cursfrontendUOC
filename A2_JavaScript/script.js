@@ -86,35 +86,39 @@ function rangoImpares(num1, num2) {
     return resultado;
 }
 
-// Pedir al usuario que introduzca los dos números
-let num1 = parseInt(prompt("Introduce el primer número entre 1 y 50:"));
-let num2 = parseInt(prompt("Introduce el segundo número entre 1 y 50:"));
+function VeureResultat() {
+    // Pedir al usuario que introduzca los dos números
+    let num1 = parseInt(prompt("Introduce el primer número entre 1 y 50:"));
+    let num2 = parseInt(prompt("Introduce el segundo número entre 1 y 50:"));
 
-// Comprobción del rango permitido
-if (num1 >= 1 && num1 <= 50 && num2 >= 1 && num2 <= 50) {
-    
-    let mostrar= 'La suma es: ';
-    // Sumar
-    mostrar += hacerSuma(num1, num2) + '\n';
-    // Número primo o no
-    mostrar += comprobarPrimos(num1,num2) + '\n';
-    // Número par o impar
-    mostrar += comprobarPares(num1,num2) + '\n';
-    // Mostrar los pares del rango
-    mostrar += rangoPares(num1, num2) + '\n';
-    // Mostrar los impares del rango
-    mostrar += rangoImpares(num1, num2) + '\n';
-     //Números iguales
-     if (num1==num2) {
-        mostrar += 'Rango: ' + num1;
+    // Comprobción del rango permitido
+    if (num1 >= 1 && num1 <= 50 && num2 >= 1 && num2 <= 50) {
+        
+        let mostrar= 'La suma es: ';
+        // Sumar
+        mostrar += hacerSuma(num1, num2) + '\n';
+        // Número primo o no
+        mostrar += comprobarPrimos(num1,num2) + '\n';
+        // Número par o impar
+        mostrar += comprobarPares(num1,num2) + '\n';
+        // Mostrar los pares del rango
+        mostrar += rangoPares(num1, num2) + '\n';
+        // Mostrar los impares del rango
+        mostrar += rangoImpares(num1, num2) + '\n';
+        //Números iguales
+        if (num1==num2) {
+            mostrar += 'Rango: ' + num1;
+        }
+        //Mostrar información
+        alert(mostrar);
+
+    } else {
+        // Si alguno de los números está fuera de rango, mostrar mensaje de error
+        alert("Los valores introducidos deben de ser números enteros positivos entre 1 y 50.");
     }
-    //Mostrar información
-    alert(mostrar);
+}   
 
-} else {
-    // Si alguno de los números está fuera de rango, mostrar mensaje de error
-    alert("Los valores introducidos deben de ser números enteros positivos entre 1 y 50.");
-}
+
     
 
 
