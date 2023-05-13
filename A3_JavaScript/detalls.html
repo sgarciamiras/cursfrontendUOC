@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <article>
+            <!-- mostrar info completa de pokemon -->
+            <h2 id="nom">Nom</h2>
+            <img src="" id="fotoF">
+            <img src="" id="fotoB"><br>
+            Valor atac:<h4 id="atac">Atac</h4> 
+            Valor defensa:<h4 id="defe">Defensa</h4> 
+            Tipus: <h4 id="tipus">Defensa</h4> 
+            <script>
+
+            let param = new URLSearchParams(window.location.search);
+            const pokeId = param.get('id');
+            console.log(param.get('id'));
+    
+                url="https://pokeapi.co/api/v2/pokemon/" + id;
+                
+                fetch (url)
+                    .then(x => {
+                        console.dir(x);
+                        return x.json();
+                    })
+                    .then(y => {
+                        console.dir(y);
+                        document.getElementById("nom").innerHTML = y.name;
+                        document.getElementById("fotoF").setAttribute('src',y.sprites.front_default);
+                        document.getElementById("fotoB").setAttribute('src',y.sprites.back_default);
+                        document.getElementById("atac").innerHTML = y.stats[1].base_stat;
+                        document.getElementById("defe").innerHTML = y.stats[2].base_stat;
+                        document.getElementById("tipus").innerHTML = y.types[1].type.name
+                })
+                      
+            </script>    
+        </article>
+    </section>       
+</body>
+</html>
