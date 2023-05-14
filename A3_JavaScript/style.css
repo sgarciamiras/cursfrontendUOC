@@ -14,7 +14,7 @@ body {
   font-family: verdana;
 }
 
-header {
+.header {
   margin-top: 3rem;
   margin-bottom: 3rem;
   text-align: center;
@@ -29,6 +29,9 @@ h6 {
     text-align: right;
 }
 
+.enlace {
+    text-decoration: underline;
+}
 
 /*Botón de cambio de tema*/
 
@@ -105,6 +108,18 @@ input:checked + .slider:before {
     justify-content: center;
     width: 150px;
     height: 225px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.pokemon-card1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 500px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);

@@ -1,183 +1,160 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<!--
-			Nom del fitxer: index.html
-			Autora: Soledad Garcia
-			Data de creació: 09/05/2023
-		-->
-		<meta charset="UTF-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="style.css">
-		<title>Pokemon</title>
-	</head>
-	<body>
-        <header>
-            <label id="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
-            <h1>POKEMONS</h1>    
-        </header>
-        <section>
-            <article>
-                <button class="large-button" onclick="callPokemons()">Veure Pokemons</button>
-                <input class="cercador" type="text" id="cercar" placeholder="Cercar pokemon pel nom">
-                <button class="large-button" onclick="cercarPokemon()">Cercar</button>
-                
-                <div class="recuadro">
-                <!-- creació de targetes -->
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Pokemons</title>
+</head>
+<body>
+    <header class="header">
+        <label id="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <h1>EL MON POKEMON</h1>    
+    </header>
+    <section>
+        <article>
+             <button class="large-button" onclick="callPokemons()">Veure Pokemons</button>
+            <input class="cercador" type="text" id="cercar" placeholder="Cercar pokemon pel nom">
+                  
+            <div class="recuadro">
+            <!-- creació de targetes -->
                 <div class="pokemon-container">
                     <div class="pokemon-card">
-                        <a id="link" href="detalls.html">
+                        <a id="link1" href="detalls.html">
                             <img src="#" id="fotoPokemon1">
                             <h2 id="info1">Nom</h2>
                         </a>
                     </div>
                     <div class="pokemon-card">
-                        <img src="" id="fotoPokemon2">
-                        <h2 id="info2">Nom</h2>
+                        <a id="link2" href="detalls.html">
+                            <img src="#" id="fotoPokemon2">
+                            <h2 id="info2">Nom</h2>
+                        </a>
                     </div>
                     <div class="pokemon-card">
-                        <img src="" id="fotoPokemon3">
-                        <h2 id="info3">Nom</h2>
+                        <a id="link3" href="detalls.html">
+                            <img src="#" id="fotoPokemon3">
+                            <h2 id="info3">Nom</h2>
+                        </a>
                     </div>
                     <div class="pokemon-card">
-                        <img src="" id="fotoPokemon4">
-                        <h2 id="info4">Nom</h2>
+                        <a id="link4" href="detalls.html">
+                            <img src="#" id="fotoPokemon4">
+                            <h2 id="info4">Nom</h2>
+                        </a>
                     </div>
                     <div class="pokemon-card">
-                        <img src="" id="fotoPokemon5">
-                        <h2 id="info5">Nom</h2>
+                        <a id="link5" href="detalls.html">
+                            <img src="#" id="fotoPokemon5">
+                            <h2 id="info5">Nom</h2>
+                        </a>
                     </div>
                     <div class="pokemon-card">
-                        <img src="" id="fotoPokemon6">
-                        <h2 id="info6">Nom</h2>
+                        <a id="link6" href="detalls.html">
+                            <img src="#" id="fotoPokemon6">
+                            <h2 id="info6">Nom</h2>
+                        </a>
                     </div>
                     <div class="pokemon-card">
-                        <img src="" id="fotoPokemon7">
-                        <h2 id="info7">Nom</h2>
+                        <a id="link7" href="detalls.html">
+                            <img src="#" id="fotoPokemon7">
+                            <h2 id="info7">Nom</h2>
+                        </a>
                     </div>
                     <div class="pokemon-card">
-                        <img src="" id="fotoPokemon8">
-                        <h2 id="info8">Nom</h2>
+                        <a id="link8" href="detalls.html">
+                            <img src="#" id="fotoPokemon8">
+                            <h2 id="info8">Nom</h2>
+                        </a>
                     </div>
                     <div class="pokemon-card">
-                        <img src="" id="fotoPokemon9">
-                        <h2 id="info9">Nom</h2>
+                        <a id="link9" href="detalls.html">
+                            <img src="#" id="fotoPokemon9">
+                            <h2 id="info9">Nom</h2>
+                        </a>
                     </div>
                     <div class="pokemon-card">
-                        <img src="" id="fotoPokemon10">
-                        <h2 id="info10">Nom</h2>
+                        <a id="link10" href="detalls.html">
+                            <img src="#" id="fotoPokemon10">
+                            <h2 id="info10">Nom</h2>
+                        </a>
                     </div>
                 </div>
             </div>      
-            <script>
-                let idPokemon=1;
-                let url="";  
+            <script> 
                 let info="";
                 let fotoPokemon="";   
-                const maxPokemonAPI=1010;            
+                const maxPokemonAPI=1010;   
 
+                //crear les cartes amb els pokemons
                 function callPokemons() {
-                    idPokemon=getRandomInt(maxPokemonAPI);
-                    url="https://pokeapi.co/api/v2/pokemon/" + idPokemon ;
                     info="info1";
                     fotoPokemon="fotoPokemon1";
-                    fetchAPI(url, info, fotoPokemon);
-                    let url2= "detalls.html?id=" + idPokemon;
-                    console.log(url2);
-                    link.addEventListener('click', function() {
-                        window.location.href = url2;
-                    }); 
-                    
-                    idPokemon=getRandomInt(maxPokemonAPI);
-                    url="https://pokeapi.co/api/v2/pokemon/" + idPokemon;
+                    crearPokemon(info, fotoPokemon, link1);
+
                     info="info2";
                     fotoPokemon="fotoPokemon2";
-                    fetchAPI(url, info, fotoPokemon);
+                    crearPokemon(info, fotoPokemon, link2);
 
-                    idPokemon=getRandomInt(maxPokemonAPI);
-                    url="https://pokeapi.co/api/v2/pokemon/" + idPokemon;
                     info="info3";
                     fotoPokemon="fotoPokemon3";
-                    fetchAPI(url, info, fotoPokemon);
+                    crearPokemon(info, fotoPokemon, link3);
 
-                    idPokemon=getRandomInt(maxPokemonAPI);
-                    url="https://pokeapi.co/api/v2/pokemon/" + idPokemon;
                     info="info4";
                     fotoPokemon="fotoPokemon4";
-                    fetchAPI(url, info, fotoPokemon);
+                    crearPokemon(info, fotoPokemon, link4);
 
-                    idPokemon=getRandomInt(maxPokemonAPI);
-                    url="https://pokeapi.co/api/v2/pokemon/" + idPokemon;
                     info="info5";
                     fotoPokemon="fotoPokemon5";
-                    fetchAPI(url, info, fotoPokemon);
+                    crearPokemon(info, fotoPokemon, link5);
 
-                    idPokemon=getRandomInt(maxPokemonAPI);
-                    url="https://pokeapi.co/api/v2/pokemon/" + idPokemon;
                     info="info6";
                     fotoPokemon="fotoPokemon6";
-                    fetchAPI(url, info, fotoPokemon);
+                    crearPokemon(info, fotoPokemon, link6);
 
-                    idPokemon=getRandomInt(maxPokemonAPI);
-                    url="https://pokeapi.co/api/v2/pokemon/" + idPokemon;
                     info="info7";
                     fotoPokemon="fotoPokemon7";
-                    fetchAPI(url, info, fotoPokemon);
+                    crearPokemon(info, fotoPokemon, link7);
 
-                    idPokemon=getRandomInt(maxPokemonAPI);
-                    url="https://pokeapi.co/api/v2/pokemon/" + idPokemon;
                     info="info8";
                     fotoPokemon="fotoPokemon8";
-                    fetchAPI(url, info, fotoPokemon);
+                    crearPokemon(info, fotoPokemon, link8);
 
-                    idPokemon=getRandomInt(maxPokemonAPI);
-                    url="https://pokeapi.co/api/v2/pokemon/" + idPokemon;
                     info="info9";
                     fotoPokemon="fotoPokemon9";
-                    fetchAPI(url, info, fotoPokemon);
+                    crearPokemon(info, fotoPokemon, link9);
 
-                    idPokemon=getRandomInt(maxPokemonAPI);
-                    url="https://pokeapi.co/api/v2/pokemon/" + idPokemon;
                     info="info10";
                     fotoPokemon="fotoPokemon10";
-                    fetchAPI(url, info, fotoPokemon);
+                    crearPokemon(info, fotoPokemon, link10);    
                 }   
 
                 //cercador
-                function cercarPokemon() {
-                    const searchBox = document.getElementById('cercar');
-                    const pokemonCards = document.querySelectorAll('.pokemon-card');
+                const searchBox = document.getElementById('cercar');
+                const pokemonCards = document.querySelectorAll('.pokemon-card');
 
-                    searchBox.addEventListener('input', function() {
-                    const searchValue = searchBox.value.toLowerCase();
+                searchBox.addEventListener('input', function() {
+                const searchValue = searchBox.value.toLowerCase();
                 
-                    pokemonCards.forEach(function(card) {
-                        const pokemonName = card.querySelector('h2').textContent.toLowerCase();
-                            
-                            if (pokemonName.includes(searchValue)) {
+                pokemonCards.forEach(function(card) {
+                    const pokemonName = card.querySelector('h2').textContent.toLowerCase(); 
+                        if (pokemonName.includes(searchValue)) {
                             card.style.display = 'flex';
-                            } else {
+                        } else {
                             card.style.display = 'none';
-                            }
-                        });
+                        }
                     });
-                }
-                
-                
-
-          
-                     
+                });    
             </script>
         </article> 
     </section>
-
     <footer>
         <h6>Realitzat per: Soledad</h6>
         <script src="script.js"></script>
     </footer>
-    </body>
+</body>
 </html>

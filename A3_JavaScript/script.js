@@ -1,21 +1,20 @@
 const colorSwitch = document.querySelector('#switch input[type="checkbox"]');
-            function cambiaTema(ev){
-                if(ev.target.checked){
-                    document.documentElement.setAttribute('tema', 'light');
-                } else {
-                    document.documentElement.setAttribute('tema', 'dark');
-                }
-            }
-            colorSwitch.addEventListener('change', cambiaTema);
+//funció per canviar el color del tema
+function cambiaTema(ev){
+    if(ev.target.checked){
+        document.documentElement.setAttribute('tema', 'light');
+    } else {
+        document.documentElement.setAttribute('tema', 'dark');
+    }
+}
+colorSwitch.addEventListener('change', cambiaTema);
 
-
-
-//genera un número aleatori - màxim pokemons 1110
+//funció per generar un número aleatori
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
-//extraer información de la API
+//funció per extraure informació del pokemon de la API
 function fetchAPI(url,info,fotoPokemon) {
     fetch (url)
     .then(x => {
@@ -29,23 +28,18 @@ function fetchAPI(url,info,fotoPokemon) {
     })
 }
 
-//extraer información del pokemon seleccionado
-function fetchPokemon1(url) {
-    fetch (url)
-    .then(x => {
-        console.dir(x);
-        return x.json();
-    })
-    .then(y => {
-        console.dir(y);
-        document.getElementById(nom).innerHTML = y.name;
-        document.getElementById(fotoF).setAttribute('src',y.sprites.front_default);
-        document.getElementById(fotoB).setAttribute('src',y.sprites.back_default);
-        document.getElementById(atac).innerHTML = y.stats[1].base_stat;
-        document.getElementById(defe).innerHTML = y.stats[2].base_stat;
-        //falta el tipus
+//funció per crear una carta de pokemon
+function crearPokemon(info, fotoPokemon,link) {
+    let idPokemon=getRandomInt(maxPokemonAPI);
+    let url="https://pokeapi.co/api/v2/pokemon/" + idPokemon ;
+    fetchAPI(url, info, fotoPokemon);
+    link.addEventListener('click', (e) => {
+    e.preventDefault(); 
+    const detallsUrl = 'detalls.html?id=' + idPokemon; 
+    window.location.href = detallsUrl;
     })
 }
+
 
 /*
 Nom = Objecte.name
