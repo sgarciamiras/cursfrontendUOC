@@ -13,7 +13,7 @@
     </header>
    
     <section>    
-        <article>
+        <article class="recuadroP">
             <!-- mostrar info completa de pokemon -->
             <div class="pokemon-card1">
                 <h2 id="nom">Nom</h2>
@@ -25,6 +25,17 @@
             </div>
            
             <script>
+                //color del tema
+                const tema = localStorage.getItem("tema"); // Lee el tema seleccionado de localStorage
+
+                if (tema === "dark") {
+                    document.documentElement.setAttribute('tema', 'dark'); // Aplica la clase "dark-theme" al body
+                }
+                else {
+                    document.documentElement.setAttribute('tema', 'light');
+                }
+
+                //mostrar la informació del pokemon
                 let param = new URLSearchParams(window.location.search);
                 const pokeId = param.get("id");
                 console.log(param.get("id"));
@@ -59,7 +70,6 @@
     </section>   
     <footer>
         <h6>Realitzat per: Soledad</h6>
-        <script src="script.js"></script>
     </footer>    
 </body>
 </html>
